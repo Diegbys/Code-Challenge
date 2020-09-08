@@ -1,15 +1,11 @@
-//Navbar -> Para que se oculte y aparezca
+//HEADER------------------------------------------------------------------------
+//para transformar la barra de navegación
 
 let ubicacionPrincipal = window.pageYOffset;
 let barraNavegacion = document.getElementById("content-Header");
 
 window.addEventListener("scroll", function() {
     let desplazamientoActual = window.pageYOffset;
-    //  if (ubicacionPrincipal >= desplazamientoActual) {
-    //    barraNavegacion.style.top = "0px";
-    //  } else {
-    //    barraNavegacion.style.top = "-100px";
-    //}
 
     if (ubicacionPrincipal >= barraNavegacion.clientHeight) {
         transformarBarraNavegación();
@@ -20,16 +16,7 @@ window.addEventListener("scroll", function() {
     ubicacionPrincipal = desplazamientoActual;
 })
 
-//Funcion para que se cambie la barra de navegación
-let logo = document.getElementsByClassName("logo");
-let navMenu = document.getElementsByClassName("navMenu ");
-let navMenu_li = document.getElementsByClassName("navMenu li");
-let navMenu_li_first_child = document.getElementsByClassName("navMenu li:first-child");
-let navMenu_li_a = document.getElementsByClassName("navMenu li a");
-let contentMedia = document.getElementsByClassName("contentMedia");
-let contentMedia_h5 = document.getElementsByClassName("contentMedia h5");
-let social_Media_a = document.getElementsByClassName("social-Media a");
-
+//Funciones para que se cambie la barra de navegación
 function transformarBarraNavegación() {
     $('.content-Header').addClass('little-content-Header');
     $('.logo').addClass('little-logo');
@@ -55,3 +42,18 @@ function retornarBarraNavegacion() {
     $('.social-Media a').removeClass('little-social-Media-a');
     $('.social-Media a i ').removeClass('little-social-Media-a-i');
 }
+
+//FOOTER------------------------------------------------------------------------
+$('.show-Hide button').on('click', function(e) {
+    e.preventDefault();
+    $('.footer').toggleClass('showFooter');
+
+    if (document.querySelector("#footer.showFooter")) {
+        document.getElementById('btn-Show-Hide').textContent = ' ';
+        document.getElementById('btn-Show-Hide').textContent = 'Ocultar';
+    } else {
+        document.getElementById('btn-Show-Hide').innerHTML = " ";
+        document.getElementById('btn-Show-Hide').innerHTML = "Mostrar";
+    }
+
+});

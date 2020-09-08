@@ -1,13 +1,20 @@
 /*General*/
 
 body {
-    height: 2000px;
+    overflow-y: scroll;
 }
 
 
 /*Header*/
 
+header::before {
+    content: "";
+    display: block;
+    margin-bottom: 35vh;
+}
+
 .content-Header {
+    top: 0;
     height: 35vh;
     position: fixed;
     width: 100%;
@@ -18,6 +25,10 @@ body {
     width: 150px;
     margin: 0% 3%;
     transition: all 1s;
+}
+
+.logo:hover {
+    transform: scale(1.1);
 }
 
 .navMenu {
@@ -199,4 +210,61 @@ body {
 .little-social-Media-a-i {
     line-height: 50px !important;
     font-size: 25px !important;
+}
+
+
+/*Cuerpo de la pagina*/
+
+.principalContainer {
+    height: calc(100vh-);
+}
+
+
+/*Footer*/
+
+.content-Footer {
+    height: 40vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.footer {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    bottom: -97%;
+    height: 120%;
+    -webkit-transition: all 500ms cubic-bezier(0.600, 0, 0.735, 0.045);
+    /* older webkit */
+    -webkit-transition: all 500ms cubic-bezier(0.600, -0.280, 0.735, 0.045);
+    -moz-transition: all 500ms cubic-bezier(0.600, -0.280, 0.735, 0.045);
+    -o-transition: all 500ms cubic-bezier(0.600, -0.280, 0.735, 0.045);
+    transition: all 500ms cubic-bezier(0.600, -0.280, 0.735, 0.045);
+    /* easeInBack */
+    -webkit-transition-timing-function: cubic-bezier(0.600, 0, 0.735, 0.045);
+    /* older webkit */
+    -webkit-transition-timing-function: cubic-bezier(0.600, -0.280, 0.735, 0.045);
+    -moz-transition-timing-function: cubic-bezier(0.600, -0.280, 0.735, 0.045);
+    -o-transition-timing-function: cubic-bezier(0.600, -0.280, 0.735, 0.045);
+    transition-timing-function: cubic-bezier(0.600, -0.280, 0.735, 0.045);
+    /* easeInBack */
+}
+
+.show-Hide {
+    margin-top: 40px;
+}
+
+.footer-Section {
+    height: 80%;
+    border-top: 1px solid #f1f1f1;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.footer-Section>div {
+    height: 100%;
+    border-right: 2px solid #f1f1f1;
+}
+
+.showFooter {
+    bottom: -20%;
 }
