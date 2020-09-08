@@ -51,6 +51,10 @@ $('.show-Hide button').on('click', function(e) {
     if (document.querySelector("#footer.showFooter")) {
         document.getElementById('btn-Show-Hide').textContent = ' ';
         document.getElementById('btn-Show-Hide').textContent = 'Ocultar';
+
+        $('html, body').animate({
+            scrollTop: $(document).height(),
+        }, 'slow');
     } else {
         document.getElementById('btn-Show-Hide').innerHTML = " ";
         document.getElementById('btn-Show-Hide').innerHTML = "Mostrar";

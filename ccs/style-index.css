@@ -223,17 +223,32 @@ header::before {
 /*Footer*/
 
 .content-Footer {
-    height: 40vh;
+    height: 10vh;
     overflow: hidden;
     position: relative;
 }
 
+.show-Hide button {
+    color: Black;
+    width: 200px;
+    background-color: rgba(255, 253, 253, 0.733);
+    border-style: none;
+    transition: all .5s;
+    clip-path: rectangle(50%, 100%, 100%, 100%);
+    cursor: pointer;
+}
+
+.show-Hide button:hover {
+    background-color: crimson;
+}
+
 .footer {
+    margin-top: 0;
     overflow: hidden;
-    position: absolute;
+    position: relative;
     width: 100%;
-    bottom: -97%;
-    height: 120%;
+    bottom: 0%;
+    height: 0vh;
     -webkit-transition: all 500ms cubic-bezier(0.600, 0, 0.735, 0.045);
     /* older webkit */
     -webkit-transition: all 500ms cubic-bezier(0.600, -0.280, 0.735, 0.045);
@@ -255,16 +270,131 @@ header::before {
 }
 
 .footer-Section {
-    height: 80%;
-    border-top: 1px solid #f1f1f1;
-    border-bottom: 1px solid #f1f1f1;
+    height: 100%;
+    overflow: hidden;
+    border-top: 1px solid rgba(236, 236, 236, 0.384);
+    border-bottom: 1px solid rgba(236, 236, 236, 0.384);
 }
 
 .footer-Section>div {
     height: 100%;
-    border-right: 2px solid #f1f1f1;
+    border-right: 1px solid rgba(236, 236, 236, 0.384);
+    ;
 }
 
 .showFooter {
-    bottom: -20%;
+    height: 30vh;
+}
+
+.footer-Section>div>p {
+    color: #ffff;
+    font-weight: 700;
+}
+
+.footer-Section>div>ul>li>a {
+    color: #ffff;
+    font-weight: 100;
+    transition: all .3s;
+}
+
+.footer-Section>div>ul>li>a:hover {
+    color: crimson;
+}
+
+.footer-Section>div>p>a {
+    color: #ffff;
+    font-weight: 100;
+    transition: all .3s;
+}
+
+
+/*Footer----------> Social Media*/
+
+.footer-Social-Media {
+    padding-top: 1%;
+}
+
+.footer-Social-Media ul {
+    list-style: none;
+}
+
+.footer-Social-Media a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1px 1px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.footer-Social-Media a i {
+    color: black;
+    background-color: rgba(236, 236, 236, 0.836);
+    padding: 8px 9px;
+    border-radius: 50%;
+    transition: all .3s;
+}
+
+.footer-Social-Media a i:hover {
+    transform: scale(1.2);
+    background-color: crimson;
+    color: white;
+}
+
+
+/*Footer---------->Buscador*/
+
+.main_buscador {
+    display: flex;
+    background-color: rgba(236, 236, 236, 0.836);
+    border-radius: 40px;
+    align-items: center;
+    transition: all .5s !important;
+    height: 30px;
+}
+
+.main_buscador:hover {
+    width: auto !important;
+}
+
+.main_buscador:focus {
+    width: auto !important;
+}
+
+.main_buscador .main_buscador_txt {
+    transition: all 0.4s !important;
+    background-color: rgba(236, 236, 236, 0.836);
+    border-radius: 40px !important;
+    height: 100% !important;
+    border-bottom: none !important;
+    width: 90% !important;
+    margin: 0 !important;
+    padding: 0 2% !important;
+}
+
+.main_buscador:hover>.btn_buscar {
+    background: crimson;
+}
+
+.btn_buscar {
+    color: #063146;
+    width: 30px;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(236, 236, 236, 0.836);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    left: -20%;
+}
+
+.main_buscador input:hover {
+    border-bottom: none !important;
+}
+
+.main_buscador input:focus {
+    box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
 }
