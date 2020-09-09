@@ -28,6 +28,8 @@ function transformarBarraNavegación() {
     $('.contentMedia h5').addClass('little-contentMedia-h5 ');
     $('.social-Media a').addClass('little-social-Media-a');
     $('.social-Media a i ').addClass('little-social-Media-a-i');
+    $('.social-Media').addClass('little-social-Media');
+    $('.hamburguer').addClass('little-hamburguer');
 }
 
 function retornarBarraNavegacion() {
@@ -41,6 +43,8 @@ function retornarBarraNavegacion() {
     $('.contentMedia h5').removeClass('little-contentMedia-h5 ');
     $('.social-Media a').removeClass('little-social-Media-a');
     $('.social-Media a i ').removeClass('little-social-Media-a-i');
+    $('.social-Media').removeClass('little-social-Media');
+    $('.hamburguer').removeClass('little-hamburguer');
 }
 //BODDY---------------------------------------------------------
 var div1 = $('.p_content_1');
@@ -53,9 +57,6 @@ var btn_div3 = $('#btn-Volver3');
 var btn_div4 = $('#btn-Volver4');
 
 
-//Funcion para calcular si hay un div activo
-
-
 //Para mostrar el primer div
 div1.children('div').children('h5').on('click', function() {
     div1.removeClass('l3').removeClass('m6');
@@ -65,6 +66,7 @@ div1.children('div').children('h5').on('click', function() {
     div4.addClass('ocultarDiv');
 
     $('.btn-Div1').removeClass('ocultarBoton');
+    ajustarTamaño();
 });
 
 //Para mostrar el segundo div
@@ -157,6 +159,7 @@ $(document).ready(function() {
     let info = calcularInfo();
     document.getElementById('modal-Text').innerHTML = "El navegador que usted esta utilizando actualmente es " + info.Browser +
         " en la versión " + info.b_Version + " y el sistema operativo de su computador es " + info.SO;
+    document.getElementById("modal-img").src = "img/Fondo.jpg";
 });
 
 
@@ -234,3 +237,16 @@ function calcularInfo() {
         SO: OSName
     };
 }
+
+//MENU PARA DISPOSITIVOS MOVILES
+
+let enlacesHeader = document.querySelectorAll(".navTlfn")[0];
+let semaforo = true;
+
+document.querySelectorAll(".hamburguer")[0].addEventListener("click", function() {
+    enlacesHeader.classList.toggle("menudos");
+})
+
+$('.navTlfn').on('click', function() {
+    $('.navTlfn').removeClass('menudos');
+});
