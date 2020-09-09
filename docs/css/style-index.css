@@ -1,4 +1,4 @@
-/*General*/
+    /*General*/
 
 body {
     overflow-y: scroll;
@@ -12,9 +12,9 @@ h5 {
 
 
 /*
--------------------
+----------------------------------------------------------------
 Header
--------------------
+------------------------------------------------------------
 */
 
 header::before {
@@ -42,6 +42,9 @@ header::before {
 .logo:hover {
     transform: scale(1.1);
 }
+
+
+/*Header -> Menu de navegación*/
 
 .navMenu {
     margin-top: 18%;
@@ -170,7 +173,7 @@ header::before {
 }
 
 
-/*Little Header -------------------> APLICACIÓN EN JAVASCRIPT*/
+/*Little Header (compacta el header) -------------------> APLICACIÓN EN JAVASCRIPT*/
 
 .little-content-Header {
     height: 80px;
@@ -253,7 +256,6 @@ header::before {
 
 .navTlfn a {
     text-decoration: none;
-    margin-left: 20px;
     font-size: 35px;
 }
 
@@ -263,9 +265,9 @@ header::before {
 
 
 /*
---------------------------
+-------------------------------------------------------------------------------------------------------------------
 Cuerpo de la pagina
---------------------------
+-----------------------------------------------------------------------------------------------
 */
 
 .principalContainer {
@@ -278,6 +280,9 @@ Cuerpo de la pagina
 .principalContainer>.row {
     height: 100%;
 }
+
+
+/*Conenedores con las espesificaciones exigidas*/
 
 .principalContainer>.row>.col>div {
     margin-top: 5%;
@@ -364,7 +369,11 @@ Cuerpo de la pagina
 }
 
 
-/*MODAL*/
+/*
+--------------------------------------------------------------------------------
+MODAL
+------------------------------------------------------------------------------
+*/
 
 .popup {
     display: flex;
@@ -466,9 +475,9 @@ Cuerpo de la pagina
 
 
 /*
-----------------------------
+------------------------------------------------------------------------------------------------
 Footer
-----------------------------
+------------------------------------------------------------------------------------------------
 */
 
 .content-Footer {
@@ -853,7 +862,12 @@ RESPONSIVE
     }
     /*MODAL*/
     .popup-text P {
-        font-size: 16px;
+        font-size: 12px;
+    }
+    .popup-text h1 {
+        font-size: 1rem;
+        margin-top: 50px;
+        margin-bottom: 5px;
     }
     /*Footer*/
     .footer-Section {
@@ -862,16 +876,15 @@ RESPONSIVE
     .showFooter {
         height: 900px;
     }
-}
-
-
-/*Pantallas pequeñas 480px de width no hay cambios*/
-
-
-/*320px de width*/
-
-@media screen and (max-width:320px) {
     .navTlfn a {
         font-size: 20px !important;
     }
 }
+
+
+}
+
+/*Pantallas pequeñas 480px de width no hay cambios*/
+
+/*320px de width*/
+@media screen and (max-width:320px) {

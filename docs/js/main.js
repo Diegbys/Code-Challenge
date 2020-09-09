@@ -46,7 +46,12 @@ function retornarBarraNavegacion() {
     $('.social-Media').removeClass('little-social-Media');
     $('.hamburguer').removeClass('little-hamburguer');
 }
-//BODDY---------------------------------------------------------
+
+//--------------------------------------------------------------
+//BODDY
+//--------------------------------------------------------------
+
+//Variables de los contenedores
 var div1 = $('.p_content_1');
 var div2 = $('.p_content_2');
 var div3 = $('.p_content_3');
@@ -115,6 +120,8 @@ btn_div4.on('click', function() {
     volver();
 });
 
+
+//Función que reestablece todo
 function volver() {
     div1.removeClass('ocultarDiv').addClass('l3').addClass('m6');
     div1.children('div').removeClass('activeDiv');
@@ -131,8 +138,12 @@ function volver() {
     $('.btn-Div').addClass('ocultarBoton');
 }
 
+//---------------------------------------------------------------------
+//FOOTER
+//----------------------------------------------------------------------
 
-//FOOTER------------------------------------------------------------------------
+
+//Para ocultar y mostra el footer
 $('.show-Hide button').on('click', function(e) {
     e.preventDefault();
     $('.footer').toggleClass('showFooter');
@@ -152,6 +163,10 @@ $('.show-Hide button').on('click', function(e) {
 });
 
 
+//---------------------------------------------------------------------------------------
+//Modal
+//---------------------------------------------------------------------------------------
+
 
 //Para rellenar el modal con la información correspondiente del navegador y el sistema operativo
 $(document).ready(function() {
@@ -160,7 +175,6 @@ $(document).ready(function() {
         " en la versión " + info.b_Version + " y el sistema operativo de su computador es " + navigator.appVersion;
     document.getElementById("modal-img").src = "img/Fondo.jpg";
 });
-
 
 
 //Función para calcular el nombre del sistema operativo y del navegador
@@ -228,7 +242,9 @@ function calcularInfo() {
     };
 }
 
+//---------------------------------------------------
 //MENU PARA DISPOSITIVOS MOVILES
+//---------------------------------------------------
 
 let enlacesHeader = document.querySelectorAll(".navTlfn")[0];
 let semaforo = true;
