@@ -25,7 +25,7 @@ header::before {
 
 .content-Header {
     top: 0;
-    height: 35vh;
+    height: 250px;
     position: fixed;
     width: 100%;
     transition: all 1s;
@@ -173,7 +173,7 @@ header::before {
 /*Little Header -------------------> APLICACIÓN EN JAVASCRIPT*/
 
 .little-content-Header {
-    height: 10vh;
+    height: 80px;
     transition: 0.3s linear;
 }
 
@@ -666,31 +666,9 @@ RESPONSIVE
 /*Pantallas medianas*/
 
 @media screen and (max-height:500px) {
-    /*Header*/
-    .navMenu {
-        margin-top: 7%;
-    }
     /*Header -> Social-media*/
-    .contentMedia {
-        margin-top: 0%;
-    }
-    /*Little Header -------------------> APLICACIÓN EN JAVASCRIPT*/
-    .little-logo {
-        margin-top: -15px;
-    }
-    .logo {
-        margin-top: -15px;
-    }
     .little-navMenu {
         margin-top: 0;
-    }
-    .little-social-Media-a {
-        width: 30px !important;
-        height: 30px !important;
-    }
-    .little-social-Media-a-i {
-        line-height: 30px !important;
-        font-size: 15px !important;
     }
     /*Cuerpo de la pagina*/
     .principalContainer>.row>.col>div>h5 {
@@ -713,83 +691,26 @@ RESPONSIVE
 /*Pantallas pequeñas*/
 
 @media screen and (max-height:400px) {
-    /*Header*/
-    .navMenu {
-        margin-top: 10%;
-        display: flex;
-        align-content: space-between;
-    }
-    .navMenu li {
-        margin: 0 .5rem;
-        margin-top: 1.5rem !important;
-    }
-    .navMenu li:first-child {
-        margin-top: 1.5rem !important;
-    }
-    .navMenu li a {
-        margin: 0 !important;
-        font-size: 12px !important;
-        padding: 0.5rem 0 !important;
-    }
-    /*Header -> Social-media*/
-    .contentMedia {
-        margin-top: 20px;
-    }
-    .contentMedia h5 {
-        display: none;
-    }
-    /*Little Header -------------------> APLICACIÓN EN JAVASCRIPT*/
-    .little-content-Header {
-        height: 20vh;
-    }
-    .little-navMenu {
-        margin-top: 0;
-    }
     /*Cuerpo de la pagina*/
     .popup-text h1 {
         font-size: 1rem;
     }
+    .principalContainer {
+        height: auto;
+    }
     /*Footer*/
     .content-Footer {
-        height: 15vh;
-    }
-}
-
-@media screen and (max-height:300px) {
-    /*Header*/
-    .content-Header {
-        height: 45vh;
-    }
-    /*Little Header -------------------> APLICACIÓN EN JAVASCRIPT*/
-    .little-content-Header {
-        height: 25vh;
-    }
-    /*Cuerpo de la pagina*/
-    /*Footer*/
-    .content-Footer {
-        height: 25vh;
+        height: 80px;
     }
 }
 
 @media screen and (max-height:200px) {
-    /*Header*/
-    .content-Header {
-        height: 60vh;
-    }
-    /*Little Header -------------------> APLICACIÓN EN JAVASCRIPT*/
-    .little-content-Header {
-        height: 35vh;
-    }
     /*Cuerpo de la pagina*/
     .popup-text h1 {
         margin: 10px 0;
     }
     .popup-text p {
         margin: 0;
-    }
-    /*Footer*/
-    .content-Footer {
-        height: 30vh;
     }
 }
 
@@ -848,6 +769,12 @@ RESPONSIVE
     }
 }
 
+@media screen and (max-width:996px) {
+    .principalContainer {
+        height: auto;
+    }
+}
+
 
 /*768px de width*/
 
@@ -888,7 +815,7 @@ RESPONSIVE
 @media screen and (max-width:600px) {
     /*Header*/
     .content-Header {
-        height: 10vh;
+        height: 80px;
     }
     .logo {
         width: 80px;
@@ -926,7 +853,7 @@ RESPONSIVE
     }
     /*MODAL*/
     .popup-text P {
-        font-size: 20px;
+        font-size: 16px;
     }
     /*Footer*/
     .footer-Section {
@@ -945,6 +872,6 @@ RESPONSIVE
 
 @media screen and (max-width:320px) {
     .navTlfn a {
-        font-size: 25px !important;
+        font-size: 20px !important;
     }
 }

@@ -66,7 +66,6 @@ div1.children('div').children('h5').on('click', function() {
     div4.addClass('ocultarDiv');
 
     $('.btn-Div1').removeClass('ocultarBoton');
-    ajustarTamaño();
 });
 
 //Para mostrar el segundo div
@@ -158,7 +157,7 @@ $('.show-Hide button').on('click', function(e) {
 $(document).ready(function() {
     let info = calcularInfo();
     document.getElementById('modal-Text').innerHTML = "El navegador que usted esta utilizando actualmente es " + info.Browser +
-        " en la versión " + info.b_Version + " y el sistema operativo de su computador es " + info.SO;
+        " en la versión " + info.b_Version + " y el sistema operativo de su computador es " + navigator.appVersion;
     document.getElementById("modal-img").src = "img/Fondo.jpg";
 });
 
@@ -223,18 +222,9 @@ function calcularInfo() {
         majorVersion = parseInt(navigator.appVersion, 10);
     }
 
-    //SO
-
-    var OSName = "Unknown OS";
-    if (navigator.appVersion.indexOf("Win") != -1) OSName = "Windows";
-    if (navigator.appVersion.indexOf("Mac") != -1) OSName = "MacOS";
-    if (navigator.appVersion.indexOf("X11") != -1) OSName = "UNIX";
-    if (navigator.appVersion.indexOf("Linux") != -1) OSName = "Linux";
-
     return inf_Navegator_So = {
         Browser: browserName,
-        b_Version: fullVersion,
-        SO: OSName
+        b_Version: fullVersion
     };
 }
 
